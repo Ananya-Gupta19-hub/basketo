@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Basketo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0b3c74;
+    }
+
+    .cart-container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,.1);
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 10px;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .item-details {
+      flex: 1 1 200px;
+      margin-left: 10px;
+    }
+
+    .item-details h4 { font-size: 1.1rem; color: #333; margin-bottom: 6px; }
+    .item-details p { color: #555; font-size: .9rem; }
+
+    .quantity input {
+      width: 60px;
+      padding: 5px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #0b3c74;
+      font-size: 1rem;
+      min-width: 60px;
+      text-align: right;
+    }
+
+    .cart-footer {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .cart-footer h3 { margin-bottom: 15px; }
+
+    .checkout-btn {
+      background: #e63946;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .price {
+        text-align: left;
+      }
+      .cart-footer {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Your Shopping Cart</h1>
+  <div class="cart-container">
+
+    <!-- Item 1 -->
+    <div class="cart-item">
+      <img src="img/tea1.jfif" alt="Red Label Tea">
+      <div class="item-details">
+        <h4>Red Label Tea - 1kg</h4>
+        <p>9% Off</p>
+      </div>
+      <div class="quantity">
+        <input type="number" value="1" min="1">
+      </div>
+      <div class="price">₹79</div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="cart-item">
+      <img src="img/tea2.jfif" alt="Tata Tea">
+      <div class="item-details">
+        <h4>Tata Tea Premium - 1kg</h4>
+        <p>5% Off</p>
+      </div>
+      <div class="quantity">
+        <input type="number" value="2" min="1">
+      </div>
+      <div class="price">₹99</div>
+    </div>
+
+    <!-- Item 3 (placeholder image) -->
+    <div class="cart-item">
+      <img src="img/tea4.jfif" alt="Rice">
+      <div class="item-details">
+        <h4>Tetley Tea - 5kg</h4>
+        <p>10% Off</p>
+      </div>
+      <div class="quantity">
+        <input type="number" value="1" min="1">
+      </div>
+      <div class="price">₹450</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="cart-footer">
+      <h3>Total: ₹628</h3>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+</body>
+</html>

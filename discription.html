@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      padding: 15px;
+    }
+
+    /* Container */
+    .div1 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap; /* allows stacking on small screens */
+    }
+
+    /* Image */
+    .div2 {
+      flex: 1 1 40%; /* grow/shrink with a base of 40% */
+      max-width: 400px;
+    }
+    .div2 img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+
+    /* Product details */
+    .product-info {
+      flex: 1 1 55%;
+    }
+    .product-info h4 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      color: #0b3c74;
+    }
+    .product-info h5 {
+      color: #c62828;
+      margin-bottom: 5px;
+    }
+    .product-info p {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .div1 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .div2, .product-info {
+        max-width: 100%;
+      }
+      .product-info h4 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="div1">
+    <div class="div2">
+      <img src="img/tea1.jfif" alt="Red Label Tea">
+    </div>
+    <div class="product-info">
+      <h4>Red Label Tea - 1kg pkt</h4>
+      <h5>9% Off</h5>
+      <p><strong>Rs.79.00</strong></p>
+      <p>(Inclusive of all taxes)</p>
+      <h4>About the Product</h4>
+      <p>
+        Our tea is carefully crafted from handpicked leaves, bringing you a rich aroma and refreshing taste in every sip. 
+        Blending tradition with quality, it offers natural goodness, soothing comfort, and a perfect way to relax or energize your day.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
